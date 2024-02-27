@@ -47,13 +47,47 @@ public class convetitore extends Application{
 		int base = Integer.parseInt(tbase.getText());
 		int resto = 0;
 		String s = " ";
+		String a = "" ;
+		String b = "" ;
+		String c = "" ;
+		String d = "" ;
+		String e = "" ;
+		String f = "" ;
 		for(int i=0;numero>0;i++) {
 			resto=numero;
 			numero=numero/base;
 			resto=resto-(numero*base);
-			s=resto+s;
+			if(resto==10) {
+				 a = "A";
+				 resto = 16;
+			}
+			if(resto==11) {
+				 b = "B";
+				 resto = 16;
+			}
+			if(resto==12) {
+				 c = "C";
+				 resto = 16;
+			}
+			if(resto==13) {
+				 d = "D";
+				 resto = 16;
+			}
+			if(resto==14) {
+				 e = "E";
+				 resto = 16;
+				
+			}
+			if(resto==15) {
+				 f = "F";
+				 resto = 16;
+			}
+			
+			if(resto!=16) {
+				s=resto+s;
+			}
 		}
-		lris.setText(s);
+		lris.setText(s+a+b+c+d+e+f);
 		
 	}
 	
